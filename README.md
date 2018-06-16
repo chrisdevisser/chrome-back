@@ -11,3 +11,5 @@ Go to chrome://extensions, click "Load Unpacked Extension", and choose the folde
 Due to Chrome not providing mouse button info on up events, it's possible to trick the extension into thinking the back button was unpressed when it actually wasn't yet. This is hard to do accidentally.
 
 This won't work if a new tab is opened to the new tab page and then back is pressed. As mentioned above, the extension can't run on that page, so only normal back button behaviour is allowed.
+
+When the tab has no history, the back mouse button works only when the mouse is over the content area, not the omnibox or anything. This is because the extension can't detect mouse buttons outside of the content area.

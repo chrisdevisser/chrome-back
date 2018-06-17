@@ -12,11 +12,7 @@ document.addEventListener('mousedown', e => {
 document.addEventListener('mouseup', e => {
     if (!g_backButtonDownOccurred) return;
 
-    if (history.length === 1) {
-        console.log('Making back click close tab')
-        e.preventDefault();
-        chrome.runtime.sendMessage({
-            msg: 'closeTab'
-        });
-    }
+    chrome.runtime.sendMessage({
+        msg: 'closeTab'
+    });
 });
